@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const repoRoot = path.resolve(__dirname, "..");
+const PROJECT_NAME = "DOCS";
 
 const readJson = (relativePath) => {
   const content = fs.readFileSync(path.join(repoRoot, relativePath), "utf8");
@@ -20,7 +21,7 @@ test("docs.json has required Mintlify structure", () => {
   const docs = readJson("docs.json");
 
   assert.equal(docs.$schema, "https://mintlify.com/docs.json");
-  assert.equal(docs.name, "DOCS");
+  assert.equal(docs.name, PROJECT_NAME);
   assert.equal(docs.theme, "mint");
   assert.deepEqual(Object.keys(docs.colors).sort(), ["dark", "light", "primary"]);
   assert.ok(Array.isArray(docs.navigation));
@@ -42,7 +43,7 @@ test("index.mdx contains expected frontmatter and intro content", () => {
   assert.match(index, /^---\s*[\s\S]*?---/m);
   assert.match(index, /title:\s*"Welcome"/);
   assert.match(index, /description:\s*"Start here"/);
-  assert.match(index, /^#\s+DOCS$/m);
+  assert.match(index, new RegExp(`^#\\s+${PROJECT_NAME}$`, "m"));
   assert.match(index, /Welcome to the Mintlify documentation site\./);
 });
 
