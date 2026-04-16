@@ -9,9 +9,16 @@
   },
   "navigation": [
     {
-      "group": "Getting Started",
+      "group": "Overview",
       "pages": [
-        "index"
+        "index",
+        "dashboard"
+      ]
+    },
+    {
+      "group": "Customization",
+      "pages": [
+        "themes-and-colors"
       ]
     }
   ]
