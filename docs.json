@@ -1,0 +1,18 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "DOCS",
+  "theme": "mint",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#6ADBB5",
+    "dark": "#0B7A60"
+  },
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "index"
+      ]
+    }
+  ]
+}
