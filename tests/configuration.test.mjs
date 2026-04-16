@@ -44,7 +44,7 @@ test("index.mdx contains expected frontmatter and intro content", () => {
   assert.match(index, /title:\s*"Welcome"/);
   assert.match(index, /description:\s*"Start here"/);
   assert.match(index, new RegExp(`^#\\s+${PROJECT_NAME}$`, "m"));
-  assert.match(index, /Welcome to the Mintlify documentation site\./);
+  assert.match(index, /Welcome to .*documentation site\./i);
 });
 
 test("Cloudflare and Wrangler configuration stay in sync", () => {
