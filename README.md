@@ -14,6 +14,12 @@ npx mintlify@latest dev
 npx mintlify@latest validate
 ```
 
+## Test
+
+```bash
+npm test
+```
+
 ## Export static site
 
 ```bash
