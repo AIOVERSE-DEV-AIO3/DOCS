@@ -39,11 +39,12 @@ test("docs navigation includes Getting Started/index", () => {
 
 test("index.mdx contains expected frontmatter and intro content", () => {
   const index = readText("index.mdx");
+  const docs = readJson("docs.json");
 
   assert.match(index, /^---\s*[\s\S]*?---/m);
   assert.match(index, /title:\s*"[^"]+"/);
   assert.match(index, /description:\s*"[^"]+"/);
-  assert.match(index, new RegExp(`^#\\s+${PROJECT_NAME}$`, "m"));
+  assert.match(index, new RegExp(`^#\\s+${docs.name}$`, "m"));
   assert.match(index, /Welcome to .*documentation site\./i);
 });
 
@@ -73,8 +74,8 @@ test("Cloudflare and Wrangler configuration stay in sync", () => {
   assert.ok(cloudflare.zones[domain], "Domain must exist in cloudflare/config.json");
   assert.equal(zoneId, cloudflare.zones[domain].zone_id);
   assert.equal(routeZoneId, zoneId);
-  const routeHost = routePattern.replace(/\/\*$/, "");
   assert.match(routePattern, /\/\*$/);
+  const routeHost = routePattern.replace(/\/\*$/, "");
   assert.ok(routeHost.endsWith(`.${domain}`), "Route host must target a subdomain of DOMAIN");
 });
 
