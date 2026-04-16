@@ -45,7 +45,7 @@ test("index.mdx contains expected frontmatter and intro content", () => {
   assert.match(index, /title:\s*"[^"]+"/);
   assert.match(index, /description:\s*"[^"]+"/);
   assert.match(index, new RegExp(`^#\\s+${docs.name}$`, "m"));
-  assert.match(index, /Welcome to .*documentation site\./i);
+  assert.match(index, /Welcome to .+documentation site\./i);
 });
 
 test("Cloudflare and Wrangler configuration stay in sync", () => {
