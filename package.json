@@ -1,0 +1,15 @@
+{
+  "name": "docs",
+  "private": true,
+  "scripts": {
+    "docs:dev": "mintlify dev",
+    "docs:validate": "mintlify validate",
+    "docs:export": "mintlify export --output export.zip",
+    "api:dev": "wrangler dev --config api/wrangler.toml",
+    "api:deploy": "wrangler deploy --config api/wrangler.toml"
+  },
+  "devDependencies": {
+    "mintlify": "^4.2.519",
+    "wrangler": "^4.11.1"
+  }
+}

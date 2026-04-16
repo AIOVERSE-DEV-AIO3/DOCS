@@ -1,0 +1,16 @@
+node_modules/
+.wrangler/
+
+out/
+dist/
+build/
+coverage/
+export.zip
+
+.env
+.env.*
+!.env.example
+*.local
+
+api/.dev.vars
+cloudflare/config.local.json
