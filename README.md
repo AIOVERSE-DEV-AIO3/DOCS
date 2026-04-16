@@ -22,4 +22,4 @@ npx mintlify@latest export --output export.zip
 
 ## Deploy
 
-Deployment runs automatically via GitHub Actions (`/home/runner/work/DOCS/DOCS/.github/workflows/deploy-docs.yml`) on pushes to `main`.
+Deployment runs automatically via GitHub Actions (`.github/workflows/deploy-docs.yml`) on pushes to `main`.
