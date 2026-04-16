@@ -1,0 +1,20 @@
+name = "aioverse-api"
+main = "src/index.ts"
+compatibility_date = "2026-04-17"
+
+account_id = "048e409496db06a280a582b5749a6170"
+
+[vars]
+ZONE_ID = "6fa98dd8a8b45584d0e7ce72b17545e2"
+DOMAIN = "shivanshsethi.in"
+ENV = "production"
+
+[[routes]]
+pattern = "api.shivanshsethi.in/*"
+zone_id = "6fa98dd8a8b45584d0e7ce72b17545e2"
+
+[placement]
+mode = "smart"
+
+[observability]
+enabled = true
