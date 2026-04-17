@@ -1,8 +1,8 @@
 {
-  "account_id": "048e409496db06a280a582b5749a6170",
+  "account_id": "YOUR_CLOUDFLARE_ACCOUNT_ID",
   "zones": {
-    "shivanshsethi.in": {
-      "zone_id": "6fa98dd8a8b45584d0e7ce72b17545e2",
+    "example.com": {
+      "zone_id": "YOUR_ZONE_ID",
       "plan": "enterprise"
     }
   }
